@@ -2,37 +2,88 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <title>UTB-site</title>
-    <style>
-      body {
-          background-image: url('/image/gedung_utb.jpg');
-          background-size: cover; 
-          background-position: center; 
-          height: 100vh; 
-          display: flex; /* Mengatur layout */
-          align-items: flex-start; /* Mengatur posisi konten di bagian atas */
-          justify-content: flex-start; /* Mengatur posisi konten di bagian kiri */
-          margin: 0; /* Menghilangkan margin default */
-      }
-      .nav-pills {
-            margin-top: 20px; /* Jarak atas navbar */
-            margin-left: 20px; /* Jarak kiri navbar */
-            background-color: rgba(255, 255, 255, 0.8); /* Latar belakang navbar */
-            border-radius: 8px; 
-            padding: 10px; 
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Bayangan di bawah navbar */
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <title>RentHive - Platform Penyewaan Barang</title>
+  <style>
+    body {
+      background-image: url('/image/Background.png');
+      /* Pastikan path gambar benar */
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      margin: 0;
+      color: #fff;
+    }
+
+    .navbar {
+      background-color: rgba(0, 115, 239, 0.644);
+      /* Warna navbar biru buram */
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-pills {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 10px;
+      border-radius: 8px;
+    }
+
+    .logo {
+      height: 60px;
+      margin-right: 10px;
+    }
+
+    .navbar-brand {
+      color: white;
+      /* Warna tulisan RentHive menjadi putih */
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-top: 150px;
+    }
+
+    .title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .description {
+      font-size: 1.25rem;
+      max-width: 800px;
+      margin-bottom: 25px;
+    }
+
+    .btn-login {
+      background-color: rgb(0, 115, 239);
+      border: none;
+      padding: 10px 20px;
+      font-size: 1rem;
+      color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .btn-login:hover {
+      background-color: rgb(0, 170, 255);
+    }
   </style>
 </head>
 
 <body>
-    <ul class="nav nav-pills" style="margin-top: 20px; margin-left: 20px;">
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="/image/Renthive_Logo2.png" alt="RentHive Logo"
+          class="logo">RentHive</a>
+      <ul class="nav nav-pills ms-auto">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/login">Login</a>
+          <a class="nav-link active" href="/login">Login</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/register">Register</a>
@@ -40,13 +91,23 @@
         <li class="nav-item">
           <a class="nav-link" href="#">About</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Universitas Teknologi Bandung</a>
-        </li>
       </ul>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
+    </div>
+  </nav>
+
+  <div class="content">
+    <h1 class="title">Selamat Datang di RentHive</h1>
+    <p class="description">
+      RentHive adalah platform penyewaan barang yang menyediakan berbagai macam kebutuhan mulai dari peralatan
+      acara hingga perlengkapan sehari-hari. Dengan RentHive, Anda bisa menyewa barang dengan mudah dan aman,
+      serta menemukan berbagai pilihan sesuai kebutuhan Anda. Bergabunglah dan nikmati kemudahan menyewa tanpa ribet!
+    </p>
+    <a href="/login" class="btn btn-login">Mulai Menyewa Sekarang</a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
