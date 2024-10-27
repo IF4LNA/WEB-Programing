@@ -9,106 +9,125 @@
     <title>Login - RentHive</title>
     <style>
         body {
-            background-image: url('/image/Background.png');
-            background-size: cover;
-            background-position: center;
+            background-color: #fafafa;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             margin: 0;
-            color: #fff;
             font-family: Arial, sans-serif;
-        }
-
-        
-        .logo {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            width: 180px;
-            height: auto;
-            z-index: 1;
+            color: #262626;
         }
 
         .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-width: 935px;
+            width: 100%;
+        }
+
+        .login-image {
+            display: none;
+        }
+
+        .login-box {
             max-width: 350px;
-            padding: 40px;
-            background-color: rgba(169, 169, 169, 0.75);
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        h2 {
-            font-size: 1.75rem;
-            font-weight: bold;
-            margin-bottom: 1.5rem;
+            width: 100%;
+            padding: 2rem;
+            background-color: #fff;
+            border: 1px solid #dbdbdb;
             text-align: center;
+            border-radius: 8px;
         }
 
-        .form-label {
-            font-weight: bold;
-            font-size: 0.9rem;
-            color: #3e3e3e;
+        .logo {
+            width: 175px;
+            margin-bottom: 1.5rem;
         }
 
         .form-control {
-            background-color: #666666;
-            border: none;
-            color: #ffffff;
-            font-size: 1rem;
+            background-color: #fafafa;
+            border: 1px solid #dbdbdb;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            padding: 10px;
         }
 
         .form-control:focus {
-            background-color: #d8d8d8;
-            color: #4e4e4e;
-            border-color: rgb(0, 115, 239);
+            background-color: #fafafa;
+            border-color: #aaa;
             box-shadow: none;
         }
 
         .btn-primary {
-            background-color: rgb(0, 115, 239);
+            background-color: #0095f6;
             border: none;
             width: 100%;
             padding: 10px;
             font-weight: bold;
             font-size: 1rem;
-            margin-top: 20px;
+            margin-top: 15px;
         }
 
         .btn-primary:hover {
-            background-color: #1f00e9a1;
+            background-color: #007bbd;
         }
 
         #message {
             font-size: 0.875rem;
-            color: #e87c03;
+            color: #ed4956;
             text-align: center;
             margin-top: 10px;
+        }
+
+        .register-link {
+            margin-top: 1rem;
+            font-size: 0.875rem;
+        }
+
+        .register-link a {
+            color: #0095f6;
+            text-decoration: none;
+        }
+
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Styling */
+        @media (min-width: 768px) {
+            .login-image {
+                display: block;
+                max-width: 450px;
+                height: auto;
+                margin-right: 30px;
+            }
         }
     </style>
 </head>
 
 <body>
-    <a href="/menuawal/">
-        <img src="/image/Renthive_Logo1.png" alt="RentHive Logo" class="logo">
-    </a>
-    
     <div class="container">
-        <h2>Login</h2>
-        <form id="loginForm">
-            <div class="mb-3">
-                <label for="username" class="form-label">Username</label>
-                <input type="text" class="form-control" id="username" required>
+        <div class="login-box">
+            <a href="/menuawal">
+                <img src="/image/Renthive_Logo1.png" alt="RentHive Logo" class="logo">
+            </a>
+            <form id="loginForm">
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="username" placeholder="Username" required>
+                </div>
+                <div class="mb-3">
+                    <input type="password" class="form-control" id="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Log In</button>
+            </form>
+            <div id="message" style="display: none;">
+                Username atau password salah. Silakan coba lagi.
             </div>
-            <div class="mb-3">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" class="form-control" id="password" required>
+            <div class="register-link">
+                Belum punya akun? <a href="/register">Daftar</a>
             </div>
-            <button type="submit" class="btn btn-primary">Login</button>
-        </form>
-        <div id="message" style="display: none;">
-            Username atau password salah. Silakan coba lagi.
         </div>
     </div>
 
